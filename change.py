@@ -1,5 +1,18 @@
 import datetime
-time = [8,58,50,0]
+now = datetime.datetime.now()
+while True:
+          try:
+                    ask_hour = int(input("Inter your hours: "))
+                    ask_minute = int(input("Inter your minutes: "))
+                    ask_second = int(input("Inter your second: "))
+                    
+          except ValueError:
+                    print("You just can inter number")
+                    ask_hour = int(input("Inter your hours: "))
+                    ask_minute = int(input("Inter your minutes: "))
+                    ask_second = int(input("Inter your second: "))
+                    break
+time = [ask_hour,ask_minute,ask_second,0]
 while True:
           while time[3] < 99999:
                     time[3] += 1
