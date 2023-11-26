@@ -1,18 +1,15 @@
 import datetime
 now = datetime.datetime.now()
 while True:
-          try:
-                    ask_hour = int(input("Inter your hours: "))
-                    ask_minute = int(input("Inter your minutes: "))
-                    ask_second = int(input("Inter your second: "))
                     
+          ask_hour , ask_minute , ask_second = input("set your timer like (hour:minute:second): ").split(":")
+          try:
+                    time = [int(ask_hour),int(ask_minute),int(ask_second),10000]
           except ValueError:
-                    print("You just can inter number")
-                    ask_hour = int(input("Inter your hours: "))
-                    ask_minute = int(input("Inter your minutes: "))
-                    ask_second = int(input("Inter your second: "))
+                    print("You just can inter number!")
+                    ask_hour , ask_minute , ask_second = input("set your timer like (hour:minute:second): ").split(":")
+          else:
                     break
-time = [ask_hour,ask_minute,ask_second,10000]
 while True:
           while True:
                     time[3] -= 1
